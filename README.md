@@ -20,6 +20,12 @@
 -   **Text-to-Speech**: Convert the summarized text to speech using OpenAI's TTS model.
 -   **文本转语音**: 使用 OpenAI 的 TTS 模型将总结的文本转换为语音。
 
+-   **Automatic Audio Segmentation**: Automatically split long audio files into segments. The segment size can be customized by the user.
+-   **自动音频切片**: 自动将长音频文件切片，切片大小用户可以自定义。
+
+-   **Automatic Text Segmentation**: If the text content is too long, it can be automatically split into smaller parts for processing. Previous summaries are also included in the prompts sent to GPT.
+-   **自动文本切片**: 如果文字内容过长，可以自动切片提问，并且将之前总结的内容也发送给 GPT。
+
 ## Requirements
 
 ## 依赖
