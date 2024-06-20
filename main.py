@@ -103,11 +103,10 @@ def text_to_speech(input_text):
         voice="onyx",
         input=input_text
     )
-    speech_file_path = Path("./speech_output.mp3")  # Define path to save audio file
-    with open(speech_file_path, 'wb') as f:
-        f.write(speech_response['audio_content'])  # Save audio file
+    speech_file_path = Path("./speech_output.mp3")  # 定义音频文件的保存路径
+    speech_response.stream_to_file(speech_file_path)  # 保存音频文件
 
-    return str(speech_file_path)  # Return path to audio file for download or playback
+    return speech_file_path  # 返回音频文件的路径供下载或播放
 
 with gr.Blocks() as demo:
     # Audio upload and transcription part
