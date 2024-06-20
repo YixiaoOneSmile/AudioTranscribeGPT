@@ -98,7 +98,7 @@ def summarize_text_with_progress(input_text, prompt, progress=gr.Progress(track_
 
 # Define function to convert text to speech
 def text_to_speech(input_text):
-    speech_response = client.Audio.create(
+    speech_response = client.audio.speech.create(
         model="tts-1",
         voice="onyx",
         input=input_text
